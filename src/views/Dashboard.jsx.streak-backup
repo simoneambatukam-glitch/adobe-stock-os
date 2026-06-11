@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 
 import StatCard from "../components/StatCard";
-import StreakCard from "../components/StreakCard";
 
 export default function Dashboard({ assets }) {
   const approved = assets.filter(
@@ -120,7 +119,6 @@ export default function Dashboard({ assets }) {
           color="text-purple-500"
         />
 
-      <StreakCard />
       </div>
 
       <div className="bg-slate-800 rounded-2xl p-6 space-y-4">
@@ -152,7 +150,6 @@ export default function Dashboard({ assets }) {
           />
         </div>
 
-      <StreakCard />
       </div>
 
       <div className="bg-slate-800 rounded-2xl p-6 space-y-4">
@@ -185,7 +182,6 @@ export default function Dashboard({ assets }) {
           Total XP : {xp}
         </p>
 
-      <StreakCard />
       </div>
 
       <div className="bg-slate-800 rounded-2xl p-6 space-y-4">
@@ -214,7 +210,6 @@ export default function Dashboard({ assets }) {
           {Math.round(weeklyProgress)}% completed
         </p>
 
-      <StreakCard />
       </div>
 
     </div>
