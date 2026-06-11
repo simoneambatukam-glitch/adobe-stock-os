@@ -1,22 +1,44 @@
 export default function AssetVault() {
-      return (
-          <div className="space-y-6">
-                <h1 className="text-3xl font-bold">
-                        📦 Asset Vault
-                              </h1>
+  const assets = [
+    {
+      title: "Business Meeting",
+      category: "Business",
+      status: "In Review",
+    },
+    {
+      title: "Doctor Consultation",
+      category: "Medical",
+      status: "Approved",
+    },
+    {
+      title: "Online Learning",
+      category: "Education",
+      status: "Draft",
+    },
+  ];
 
-                                    <div className="bg-slate-800 rounded-2xl p-5">
-                                            <p className="text-slate-300">
-                                                      Belum ada asset.
-                                                              </p>
+  return (
+    <div className="space-y-6">
+      <h1 className="text-3xl font-bold">
+        📦 Asset Vault
+      </h1>
 
-                                                                      <button
-                                                                                className="mt-4 px-4 py-2 rounded-xl bg-blue-600"
-                                                                                        >
-                                                                                                  + Tambah Asset
-                                                                                                          </button>
-                                                                                                                </div>
-                                                                                                                    </div>
-                                                                                                                      );
-                                                                                                                      }
+      <div className="grid gap-4">
+        {assets.map((asset, index) => (
+          <div
+            key={index}
+            className="bg-slate-800 rounded-2xl p-5"
+          >
+            <h2 className="font-bold text-lg">
+              {asset.title}
+            </h2>
+
+            <p>📁 {asset.category}</p>
+
+            <p>🏷️ {asset.status}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
