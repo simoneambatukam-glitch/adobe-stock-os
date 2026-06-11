@@ -7,7 +7,7 @@ export default function MobileNav({ navItems, activeView, setActiveView, addAsse
     <>
       {showModal && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[60]">
-          <div className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl w-80 border border-purple-700">
+          <div className="bg-[#171721] p-6 rounded-3xl w-80 border border-purple-700">
             <h2 className="text-xl font-bold mb-4 text-white">
               ⚔️ Acquire Relic
             </h2>
@@ -60,10 +60,10 @@ export default function MobileNav({ navItems, activeView, setActiveView, addAsse
 
       <div
         className="
-        fixed bottom-4 left-4 right-4
-        bg-white/10 backdrop-blur-xl
-        rounded-full border border-white/10 shadow-2xl
-        px-4 py-3
+        fixed bottom-0 left-0 right-0
+        bg-[#171721]
+        border-t border-purple-900
+        px-2 py-2
         "
       >
         <div className="grid grid-cols-5 gap-1 text-center text-slate-300">
