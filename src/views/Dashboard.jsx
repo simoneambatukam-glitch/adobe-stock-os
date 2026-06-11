@@ -21,7 +21,6 @@ export default function Dashboard() {
       <div className="max-w-md mx-auto h-full flex flex-col justify-between">
 
         <div>
-
           <div className="text-center mb-8">
             <p className="text-sm tracking-[0.3em] text-purple-300">
               ◈ STOCK OS
@@ -78,7 +77,6 @@ export default function Dashboard() {
               </div>
             </div>
           </motion.div>
-
         </div>
 
         <motion.div
