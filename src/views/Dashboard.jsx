@@ -1,80 +1,128 @@
+import { motion } from "framer-motion";
+
 export default function Dashboard() {
   return (
-    <div className="relative min-h-screen overflow-hidden text-white">
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="
+        h-[100dvh]
+        overflow-hidden
+        bg-gradient-to-b
+        from-[#140B1F]
+        via-[#0D0D14]
+        to-black
+        text-white
+        px-6
+        pt-10
+      "
+    >
+      <div className="max-w-md mx-auto h-full flex flex-col justify-between">
 
-      <div className="absolute inset-0 bg-gradient-to-b from-[#07070A] via-[#0F0F17] to-[#151522]" />
-      <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-[length:24px_24px]" />
+        <div>
 
-      <div className="absolute inset-0 opacity-[0.03] flex items-center justify-center">
-        <h1 className="text-9xl font-black blur-sm tracking-[0.3em]">
-          STOCK OS
-        </h1>
-      </div>
+          <div className="text-center mb-8">
+            <p className="text-sm tracking-[0.3em] text-purple-300">
+              ◈ STOCK OS
+            </p>
 
-      <div className="relative z-10 space-y-6 p-6">
+            <h1 className="text-4xl font-black mt-3">
+              Good Evening, Viki
+            </h1>
 
-        <div className="
-          rounded-[32px]
-          border border-white/10
-          bg-white/5
-          backdrop-blur-xl
-          p-8
-          shadow-2xl
-        ">
-
-          <div className="text-sm uppercase tracking-[0.4em] text-purple-300">
-            STOCK OS
+            <p className="text-slate-400 mt-2">
+              The Adobe Stock Hunter System
+            </p>
           </div>
 
-          <h1 className="mt-4 text-4xl font-black">
-            The Adobe Stock Hunter System
-          </h1>
+          <motion.div
+            initial={{ scale: 0.95 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.2 }}
+            className="
+              rounded-3xl
+              bg-white/5
+              backdrop-blur-xl
+              border border-white/10
+              p-6
+            "
+          >
+            <p className="text-purple-300">
+              ⚔ E-RANK HUNTER
+            </p>
 
-          <p className="mt-3 text-slate-300">
-            Every asset is a relic.
-            Every upload is a hunt.
+            <h2 className="text-3xl font-bold mt-2">
+              The Beginner
+            </h2>
+
+            <div className="mt-6">
+              <div className="flex justify-between text-sm mb-2">
+                <span>EXP</span>
+                <span>12 / 100</span>
+              </div>
+
+              <div className="h-3 bg-white/10 rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: "12%" }}
+                  transition={{ duration: 1 }}
+                  className="
+                    h-full
+                    rounded-full
+                    bg-gradient-to-r
+                    from-purple-500
+                    to-fuchsia-500
+                  "
+                />
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="
+            rounded-3xl
+            bg-white/5
+            backdrop-blur-xl
+            border border-white/10
+            p-6
+            mb-24
+          "
+        >
+          <p className="text-purple-300">
+            Today's Hunt
           </p>
 
-          <div className="mt-8">
-            <div className="flex justify-between text-sm mb-2">
-              <span>⚔️ E-RANK HUNTER</span>
-              <span>THE BEGINNER</span>
-            </div>
+          <h3 className="text-2xl font-bold mt-2">
+            Upload 1 Asset
+          </h3>
 
-            <div className="h-4 rounded-full bg-white/10 overflow-hidden">
-              <div
-                className="h-full rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500"
-                style={{ width: "12%" }}
-              />
-            </div>
+          <p className="text-slate-400 mt-2">
+            Reward: +20 EXP
+          </p>
 
-            <div className="mt-2 text-xs text-slate-400">
-              EXP 12 / 100
-            </div>
-          </div>
-
-        </div>
-
-        <div className="
-          rounded-3xl
-          bg-white/5
-          backdrop-blur-xl
-          border border-white/10
-          p-6
-        ">
-          <div className="text-purple-300 font-semibold">
-            DAILY HUNT
-          </div>
-
-          <div className="mt-4 space-y-2 text-slate-200">
-            <div>☐ Upload 1 Asset</div>
-            <div>☐ Gain 20 EXP</div>
-            <div>☐ Open Relic Archive</div>
-          </div>
-        </div>
+          <button
+            className="
+              mt-5
+              w-full
+              rounded-2xl
+              bg-gradient-to-r
+              from-purple-600
+              to-fuchsia-600
+              py-3
+              font-semibold
+            "
+          >
+            Claim Reward
+          </button>
+        </motion.div>
 
       </div>
-
-    </div>
+    </motion.div>
   );
 }
