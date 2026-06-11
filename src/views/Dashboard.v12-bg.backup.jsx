@@ -3,10 +3,9 @@ export default function Dashboard() {
     <div className="relative min-h-screen overflow-hidden text-white">
 
       <div className="absolute inset-0 bg-gradient-to-b from-[#07070A] via-[#0F0F17] to-[#151522]" />
-      <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-[length:24px_24px]" />
 
       <div className="absolute inset-0 opacity-[0.03] flex items-center justify-center">
-        <h1 className="text-9xl font-black blur-sm tracking-[0.3em]">
+        <h1 className="text-8xl font-black tracking-[0.3em]">
           STOCK OS
         </h1>
       </div>
