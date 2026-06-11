@@ -34,7 +34,7 @@ export default function MobileNav({ navItems, activeView, setActiveView, addAsse
               </button>
 
               <button
-                className="flex-1 p-3 rounded-xl bg-gradient-to-br from-purple-500 via-fuchsia-500 to-red-400 animate-pulse text-white font-bold"
+                className="flex-1 p-3 rounded-xl bg-purple-600 text-white font-bold"
               >
                 Summon
               </button>
@@ -49,7 +49,7 @@ export default function MobileNav({ navItems, activeView, setActiveView, addAsse
         fixed bottom-20 left-1/2
         -translate-x-1/2
         w-16 h-16 rounded-full
-        bg-gradient-to-br from-purple-500 via-fuchsia-500 to-red-400 animate-pulse
+        bg-purple-600
         text-white text-4xl
         shadow-2xl
         z-50
