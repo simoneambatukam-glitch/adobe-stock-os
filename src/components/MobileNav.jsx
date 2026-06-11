@@ -1,7 +1,50 @@
+import { useState } from "react";
+
 export default function MobileNav() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
+      {showModal && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[60]">
+          <div className="bg-[#171721] p-6 rounded-3xl w-80 border border-purple-700">
+            <h2 className="text-xl font-bold mb-4 text-white">
+              ⚔️ Acquire Relic
+            </h2>
+
+            <input
+              placeholder="Asset Title"
+              className="w-full p-3 rounded-xl bg-slate-800 text-white mb-3"
+            />
+
+            <select
+              className="w-full p-3 rounded-xl bg-slate-800 text-white mb-4"
+            >
+              <option>Business</option>
+              <option>Medical</option>
+              <option>Education</option>
+            </select>
+
+            <div className="flex gap-2">
+              <button
+                onClick={() => setShowModal(false)}
+                className="flex-1 p-3 rounded-xl bg-slate-700 text-white"
+              >
+                Close
+              </button>
+
+              <button
+                className="flex-1 p-3 rounded-xl bg-purple-600 text-white font-bold"
+              >
+                Summon
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <button
+        onClick={() => setShowModal(true)}
         className="
         fixed bottom-20 left-1/2
         -translate-x-1/2
@@ -36,6 +79,3 @@ export default function MobileNav() {
     </>
   );
 }
-
-/* ACQUIRE RELIC MODAL READY */
-
