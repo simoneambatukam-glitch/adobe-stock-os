@@ -36,6 +36,3 @@ export default function MobileNav() {
     </>
   );
 }
-
-/* ACQUIRE RELIC MODAL READY */
-
