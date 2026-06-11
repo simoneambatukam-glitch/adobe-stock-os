@@ -1,94 +1,76 @@
 export default function Dashboard() {
   return (
-    <div className="space-y-6">
+    <div className="relative min-h-screen overflow-hidden text-white">
 
-      <div className="bg-[#171721] rounded-3xl p-6">
-        <p className="text-slate-400 text-sm">
-          GOOD EVENING, VIKI
-        </p>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#07070A] via-[#0F0F17] to-[#151522]" />
 
-        <h1 className="text-3xl font-bold mt-2">
-          ⚔️ E-RANK HUNTER
+      <div className="absolute inset-0 opacity-[0.03] flex items-center justify-center">
+        <h1 className="text-8xl font-black tracking-[0.3em]">
+          STOCK OS
         </h1>
-
-        <p className="text-slate-400 mt-1">
-          Title: The Beginner
-        </p>
-
-        <div className="mt-6">
-          <div className="flex justify-between text-sm mb-2">
-            <span>EXP</span>
-            <span>0 / 100</span>
-          </div>
-
-          <div className="w-full bg-slate-800 rounded-full h-4">
-            <div
-              className="bg-purple-500 h-4 rounded-full"
-              style={{ width: "0%" }}
-            />
-          </div>
-        </div>
       </div>
 
-      <div className="bg-[#171721] rounded-3xl p-6">
-        <h2 className="text-xl font-bold">
-          🔥 DAILY TRAINING
-        </h2>
+      <div className="relative z-10 space-y-6 p-6">
 
-        <div className="text-4xl font-bold mt-4">
-          Day 1
+        <div className="
+          rounded-[32px]
+          border border-white/10
+          bg-white/5
+          backdrop-blur-xl
+          p-8
+          shadow-2xl
+        ">
+
+          <div className="text-sm uppercase tracking-[0.4em] text-purple-300">
+            STOCK OS
+          </div>
+
+          <h1 className="mt-4 text-4xl font-black">
+            The Adobe Stock Hunter System
+          </h1>
+
+          <p className="mt-3 text-slate-300">
+            Every asset is a relic.
+            Every upload is a hunt.
+          </p>
+
+          <div className="mt-8">
+            <div className="flex justify-between text-sm mb-2">
+              <span>⚔️ E-RANK HUNTER</span>
+              <span>THE BEGINNER</span>
+            </div>
+
+            <div className="h-4 rounded-full bg-white/10 overflow-hidden">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500"
+                style={{ width: "12%" }}
+              />
+            </div>
+
+            <div className="mt-2 text-xs text-slate-400">
+              EXP 12 / 100
+            </div>
+          </div>
+
         </div>
 
-        <p className="text-slate-400 mt-2">
-          Do not skip today's hunt.
-        </p>
-      </div>
+        <div className="
+          rounded-3xl
+          bg-white/5
+          backdrop-blur-xl
+          border border-white/10
+          p-6
+        ">
+          <div className="text-purple-300 font-semibold">
+            DAILY HUNT
+          </div>
 
-      <div className="bg-[#171721] rounded-3xl p-6">
-        <h2 className="text-xl font-bold">
-          🎯 DAILY HUNTS
-        </h2>
-
-        <div className="space-y-2 mt-4">
-          <p>☐ Upload 1 Asset</p>
-          <p>☐ Gain 20 EXP</p>
-          <p>☐ Open Shadow Archive</p>
+          <div className="mt-4 space-y-2 text-slate-200">
+            <div>☐ Upload 1 Asset</div>
+            <div>☐ Gain 20 EXP</div>
+            <div>☐ Open Relic Archive</div>
+          </div>
         </div>
-
-        <button className="w-full mt-6 py-3 rounded-2xl bg-purple-600 font-bold">
-          CLAIM REWARD
-        </button>
-      </div>
-
-      <div className="grid grid-cols-2 gap-4">
-
-        <button className="bg-[#171721] rounded-2xl p-5">
-          📦
-          <div className="mt-2">
-            Shadow Archive
-          </div>
-        </button>
-
-        <button className="bg-[#171721] rounded-2xl p-5">
-          🏆
-          <div className="mt-2">
-            Titles
-          </div>
-        </button>
-
-        <button className="bg-[#171721] rounded-2xl p-5">
-          💰
-          <div className="mt-2">
-            Gold
-          </div>
-        </button>
-
-        <button className="bg-[#171721] rounded-2xl p-5">
-          ⚔️
-          <div className="mt-2">
-            Hunts
-          </div>
-        </button>
 
       </div>
 
