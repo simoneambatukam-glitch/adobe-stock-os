@@ -14,6 +14,9 @@ export default function AssetVault() {
     },
   ]);
 
+  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState("All");
+
   const addAsset = () => {
     const title = prompt("Judul asset:");
     if (!title) return;
@@ -31,6 +34,17 @@ export default function AssetVault() {
     ]);
   };
 
+  const filteredAssets = assets.filter((asset) => {
+    const matchesSearch =
+      asset.title.toLowerCase().includes(search.toLowerCase()) ||
+      asset.category.toLowerCase().includes(search.toLowerCase());
+
+    const matchesFilter =
+      filter === "All" || asset.status === filter;
+
+    return matchesSearch && matchesFilter;
+  });
+
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold">
@@ -44,8 +58,28 @@ export default function AssetVault() {
         + Tambah Asset
       </button>
 
+      <input
+        type="text"
+        placeholder="🔍 Cari asset..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="w-full p-3 rounded-xl bg-slate-800"
+      />
+
+      <select
+        value={filter}
+        onChange={(e) => setFilter(e.target.value)}
+        className="w-full p-3 rounded-xl bg-slate-800"
+      >
+        <option>All</option>
+        <option>Draft</option>
+        <option>In Review</option>
+        <option>Approved</option>
+        <option>Rejected</option>
+      </select>
+
       <div className="grid gap-4">
-        {assets.map((asset, index) => (
+        {filteredAssets.map((asset, index) => (
           <div
             key={index}
             className="bg-slate-800 rounded-2xl p-5"
@@ -59,6 +93,12 @@ export default function AssetVault() {
             <p>🏷️ {asset.status}</p>
           </div>
         ))}
+
+        {filteredAssets.length === 0 && (
+          <div className="bg-slate-800 rounded-2xl p-5">
+            Tidak ada asset ditemukan.
+          </div>
+        )}
       </div>
     </div>
   );
