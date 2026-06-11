@@ -31,14 +31,34 @@ export default function Login() {
         className="absolute -bottom-32 -right-32 w-80 h-80 bg-purple-500/20 blur-[140px] rounded-full"
       />
 
+      {/* Noise */}
+      <div
+        className="
+        pointer-events-none
+        absolute inset-0
+        opacity-[0.03]
+        bg-[radial-gradient(circle,white_1px,transparent_1px)]
+        bg-[length:12px_12px]
+        "
+      />
+
       {/* Logo */}
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: .8 }}
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          y: [0, -6, 0],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
         className="absolute top-20 text-center"
       >
-        <div className="text-4xl text-white">◈</div>
+        <div className="text-4xl text-white">
+          ◈
+        </div>
 
         <h1 className="text-2xl font-bold text-white mt-2">
           STOCK OS
@@ -51,9 +71,25 @@ export default function Login() {
 
       {/* Card */}
       <motion.div
-        initial={{ opacity: 0, y: 40, scale: .95 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: .7 }}
+        initial={{
+          opacity: 0,
+          y: 40,
+          scale: .95,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          scale: [1, 1.01, 1],
+        }}
+        transition={{
+          opacity: { duration: .7 },
+          y: { duration: .7 },
+          scale: {
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          },
+        }}
         className="
         relative
         w-full
@@ -81,6 +117,7 @@ export default function Login() {
 
         {/* Google */}
         <motion.button
+          whileHover={{ scale: 1.02 }}
           whileTap={{ scale: .98 }}
           className="
           w-full
@@ -97,9 +134,11 @@ export default function Login() {
 
         <div className="flex items-center gap-3 my-6">
           <div className="flex-1 h-px bg-white/10" />
+
           <span className="text-gray-500 text-sm">
             OR
           </span>
+
           <div className="flex-1 h-px bg-white/10" />
         </div>
 
@@ -115,6 +154,11 @@ export default function Login() {
           text-white
           mb-4
           outline-none
+          focus:border-purple-500
+          focus:ring-2
+          focus:ring-purple-500/20
+          transition-all
+          duration-300
           "
         />
 
@@ -130,6 +174,11 @@ export default function Login() {
           py-4
           text-white
           outline-none
+          focus:border-purple-500
+          focus:ring-2
+          focus:ring-purple-500/20
+          transition-all
+          duration-300
           "
         />
 
@@ -141,7 +190,12 @@ export default function Login() {
 
         <motion.button
           animate={{
-            scale: [1, 1.02, 1],
+            scale: [1, 1.03, 1],
+            boxShadow: [
+              "0 0 0 rgba(0,0,0,0)",
+              "0 0 30px rgba(168,85,247,.35)",
+              "0 0 0 rgba(0,0,0,0)",
+            ],
           }}
           transition={{
             duration: 2,
@@ -160,13 +214,13 @@ export default function Login() {
           shadow-xl
           "
         >
-          LOGIN
+          Initialize Hunter System
         </motion.button>
 
       </motion.div>
 
       <div className="absolute bottom-8 text-center text-gray-600 text-xs">
-        Built for Adobe Stock Hunters • V13.2
+        Built for Adobe Stock Hunters • V13.3
       </div>
 
     </div>
