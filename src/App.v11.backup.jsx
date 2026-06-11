@@ -25,16 +25,6 @@ import {
                         const refresh = async () => {
                             const data = await db.assets.toArray();
                                 setAssets(data);
-  };
-
-  const addAsset = async (title, category) => {
-    await db.assets.add({
-      title,
-      category,
-      status: "Draft",
-    });
-
-    refresh();
                                   };
 
                                     useEffect(() => {
@@ -85,7 +75,6 @@ import {
                                                                                                                                                                                                                                                         navItems={navItems}
                                                                                                                                                                                                                                                                 activeView={activeView}
                                                                                                                                                                                                                                                                         setActiveView={setActiveView}
-        addAsset={addAsset}
                                                                                                                                                                                                                                                                               />
 
                                                                                                                                                                                                                                                                                     <main className="flex-1 p-6 overflow-y-auto pb-24">
@@ -110,7 +99,6 @@ import {
                                                                                                                                                                                                                                                                                                                                                                                                                                                   navItems={navItems}
                                                                                                                                                                                                                                                                                                                                                                                                                                                           activeView={activeView}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                   setActiveView={setActiveView}
-        addAsset={addAsset}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         />
                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               );
