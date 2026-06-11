@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function MobileNav({ navItems, activeView, setActiveView, addAsset }) {
+export default function MobileNav() {
   const [showModal, setShowModal] = useState(false);
 
   return (
