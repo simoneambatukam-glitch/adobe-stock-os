@@ -27,7 +27,7 @@ export default function MobileNav({ navItems, activeView, setActiveView, addAsse
 
             <div className="flex gap-2">
               <button
-                onClick={async () => { await addAsset("New Asset","General"); setShowModal(false); }}
+                onClick={() => setShowModal(false)}
                 className="flex-1 p-3 rounded-xl bg-slate-700 text-white"
               >
                 Close
