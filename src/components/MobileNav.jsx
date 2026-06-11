@@ -40,3 +40,5 @@ export default function MobileNav() {
     </div>
   );
 }
+
+/* FLOATING ACTION BUTTON READY */
